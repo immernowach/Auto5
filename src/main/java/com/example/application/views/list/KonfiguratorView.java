@@ -171,7 +171,7 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
 
     
     private void selectCarColor(Div color) {
-    	for(Div colorDiv : seatColors) {
+    	for(Div colorDiv : carColors) {
         	if(colorDiv.getStyle().get("background-color").equals(color.getStyle().get("background-color"))) {
         		colorDiv.getStyle().set("border", "solid #000000 2px");
         	}else {
