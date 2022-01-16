@@ -1,0 +1,30 @@
+@import url('line-awesome/dist/line-awesome/css/line-awesome.min.css');
+
+h3 {
+    margin: 15px 20px;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+}
+
+a {
+    margin: 15px 20px;
+    padding: 0;
+    border: 0;
+    color: black;
+    font-size: 1.3em;
+    text-decoration: none;
+
+    background:
+            linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+            linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+a:hover {
+    text-decoration: none;
+    background-size: 0 0.1em, 100% 0.1em;
+}
