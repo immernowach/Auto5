@@ -19,7 +19,6 @@ import com.vaadin.flow.router.Route;
 
 public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<String> {
 	
-    DataController dc = new DataController();
     private String buttonSelection;
     
     @Override

@@ -15,7 +15,6 @@ import com.vaadin.flow.router.Route;
 @Route(value = "", layout = MainLayout.class)
 
 public class ModelleView extends VerticalLayout{
-    DataController dc = new DataController();
     public ModelleView() {
         //TODO Titel hinzufügen
         Image img1 = new Image("images/AutoSparsam.jpg", "Sparsam");
