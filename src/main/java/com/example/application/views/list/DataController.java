@@ -9,6 +9,6 @@ public class DataController {
 
     public void setButtonSelection(int buttonSelection) {
         ButtonSelection = buttonSelection;
-        System.out.println(ButtonSelection);
+        System.out.println("set: " + ButtonSelection);
     }
 }

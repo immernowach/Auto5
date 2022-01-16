@@ -1,5 +1,7 @@
 package com.example.application.views.list;
 
+import javax.annotation.PostConstruct;
+
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Image;
@@ -7,22 +9,33 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.component.radiobutton.RadioGroupVariant;
+import com.vaadin.flow.router.BeforeEvent;
+import com.vaadin.flow.router.HasUrlParameter;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Philipp's Garage | Konfigurator")
 @Route(value = "konfigurator", layout = MainLayout.class)
 
-public class KonfiguratorView extends VerticalLayout {
+public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<String> {
+	
     DataController dc = new DataController();
-    public KonfiguratorView () {
+    private String buttonSelection;
+    
+    @Override
+	public void setParameter(BeforeEvent event, String parameter) {
+		this.buttonSelection = parameter;
+		initUI();
+	}
+  
+    
+    public void initUI() {
         Image img1 = new Image("images/AutoSparsam.jpg", "Auto");
         img1.setWidth("600px");
-
-        if (dc.getButtonSelection() == 2) {
+        if (buttonSelection.equals("2")) {
             img1.setSrc("images/AutoStandard.jpg");
         }
-        else if (dc.getButtonSelection() == 3) {
+        else if (buttonSelection.equals("3")) {
             img1.setSrc("images/AutoSport.jpg");
         }
 
@@ -52,4 +65,6 @@ public class KonfiguratorView extends VerticalLayout {
         add(vl3);
         add(WeiterButtonLayout);
     }
+    
+
 }
