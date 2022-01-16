@@ -38,17 +38,17 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
             img1.setSrc("images/AutoSport.jpg");
         }
 
-
         RadioButtonGroup<String> rg1 = new RadioButtonGroup<>();
         rg1.addThemeVariants(RadioGroupVariant.LUMO_VERTICAL);
         rg1.setLabel("Sitze | Material");
         rg1.setItems("Stoff", "Leder");
-        rg1.setRequired(true);
+        rg1.setValue("Stoff");
 
         RadioButtonGroup<String> rg2 = new RadioButtonGroup<>();
         rg2.addThemeVariants(RadioGroupVariant.LUMO_VERTICAL);
         rg2.setLabel("Sitze | Anzahl");
         rg2.setItems("2 Sitze", "4 Sitze", "5 Sitze");
+        rg2.setValue("2 Sitze");
 
         VerticalLayout vl2 = new VerticalLayout(rg1, rg2);
         HorizontalLayout hl1 = new HorizontalLayout(img1, vl2);

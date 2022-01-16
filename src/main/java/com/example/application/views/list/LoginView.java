@@ -3,8 +3,6 @@ package com.example.application.views.list;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.router.BeforeEnterEvent;
-import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.BeforeEvent;
 import com.vaadin.flow.router.HasUrlParameter;
 import com.vaadin.flow.router.OptionalParameter;
@@ -28,7 +26,7 @@ public class LoginView extends VerticalLayout implements HasUrlParameter<String>
         add(new H1("Philipp's Garage"), login);
     }
 
-    
+
 
 	@Override
 	public void setParameter(BeforeEvent event, @OptionalParameter String parameter) {

@@ -7,6 +7,8 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextArea;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.QueryParameters;
 import com.vaadin.flow.router.Route;
@@ -16,7 +18,14 @@ import com.vaadin.flow.router.Route;
 
 public class ModelleView extends VerticalLayout{
     public ModelleView() {
-        //TODO Titel hinzufügen
+
+        H4 titel1 = new H4("Sparsam");
+        H4 titel2 = new H4("Standard");
+        H4 titel3 = new H4("Sport");
+        HorizontalLayout hlTitel = new HorizontalLayout(titel1, titel2, titel3);
+        VerticalLayout vlTitel = new VerticalLayout(hlTitel);
+        vlTitel.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
+
         Image img1 = new Image("images/AutoSparsam.jpg", "Sparsam");
         img1.setWidth("200px");
         Label lbl1 = new Label("Preis: 50.-\n Verbrauch: 5l/km");
@@ -24,7 +33,6 @@ public class ModelleView extends VerticalLayout{
         btn1.addClickListener(e -> btn1.getUI().ifPresent(ui -> ui.navigate("konfigurator/1")));
         VerticalLayout vl1 = new VerticalLayout(img1, lbl1, btn1);
 
-        //TODO Titel hinzufügen
         Image img2 = new Image("images/AutoStandard.jpg", "Standard");
         img2.setWidth("200px");
         Label lbl2 = new Label("Preis: 50'000.-\n Verbrauch: 15l/km");
@@ -32,7 +40,6 @@ public class ModelleView extends VerticalLayout{
         btn2.addClickListener(e -> btn2.getUI().ifPresent(ui -> ui.navigate("konfigurator/2")));
         VerticalLayout vl2 = new VerticalLayout(img2, lbl2, btn2);
 
-        //TODO Titel hinzufügen
         Image img3 = new Image("images/AutoSport.jpg", "Sport");
         img3.setWidth("200px");
         Label lbl3 = new Label("Preis: 150'000.- \n Verbrauch: 50l/km");
@@ -50,6 +57,7 @@ public class ModelleView extends VerticalLayout{
         vl4.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
 
         add(new H1("Modelle"));
+        add(vlTitel);
         add(vl4);
 
     }

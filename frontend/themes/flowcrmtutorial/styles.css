@@ -28,3 +28,9 @@ a:hover {
     text-decoration: none;
     background-size: 0 0.1em, 100% 0.1em;
 }
+
+h4 {
+    padding: 0;
+    margin: 15px 80px;
+    font-size: 1.7em;
+}
