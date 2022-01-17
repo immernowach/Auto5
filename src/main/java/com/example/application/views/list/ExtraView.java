@@ -19,7 +19,7 @@ public class ExtraView extends VerticalLayout {
         VerticalLayout vl1 = new VerticalLayout(ta1);
         vl1.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
 
-        Button WeiterButton = new Button("Weiter");
+        Button WeiterButton = new Button("Offerte anfragen");
         WeiterButton.addClickListener(e -> WeiterButton.getUI().ifPresent(ui -> ui.navigate("bestaetigung")));
         VerticalLayout WeiterButtonLayout = new VerticalLayout(WeiterButton);
         WeiterButtonLayout.setDefaultHorizontalComponentAlignment(Alignment.END);
