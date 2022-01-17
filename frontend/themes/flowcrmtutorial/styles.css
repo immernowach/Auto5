@@ -34,3 +34,7 @@ h4 {
     margin: 15px 80px;
     font-size: 1.7em;
 }
+
+p {
+    font-weight: 100;
+}

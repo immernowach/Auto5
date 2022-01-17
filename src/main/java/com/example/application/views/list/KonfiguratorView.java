@@ -33,7 +33,7 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
     Div carColor3 = new Div();
     Div carColor4 = new Div();
     Div carColor5 = new Div();
-    List<Div> carColors = new ArrayList<Div>();
+    List<Div> carColors = new ArrayList<>();
     
     HorizontalLayout seatColorPicker = new HorizontalLayout();
     VerticalLayout seatColorPickerWrapper = new VerticalLayout(new Paragraph("Sitze | Farbe"), seatColorPicker);
@@ -42,7 +42,7 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
     Div seatColor3 = new Div();
     Div seatColor4 = new Div();
     Div seatColor5 = new Div();
-    List<Div> seatColors = new ArrayList<Div>();
+    List<Div> seatColors = new ArrayList<>();
     
     @Override
 	public void setParameter(BeforeEvent event, String parameter) {
@@ -95,8 +95,7 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
     }
     
     private void createCarColorPicker() {
-    	
-        carColorPickerWrapper.setPadding(false);
+
         carColorPickerWrapper.setSpacing(false);
 
         
@@ -135,14 +134,13 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
     private void createSeatColorPicker() {
  
         seatColorPickerWrapper.setPadding(false);
-        seatColorPickerWrapper.setSpacing(false);
         
         seatColors.add(seatColor1);
         seatColors.add(seatColor2);
         seatColors.add(seatColor3);
         seatColors.add(seatColor4);
         seatColors.add(seatColor5);
-        
+
  
         for(Div color : seatColors) {
         	color.setHeight("30px");
@@ -191,6 +189,5 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
         }
     	
     }
-    
 
 }
