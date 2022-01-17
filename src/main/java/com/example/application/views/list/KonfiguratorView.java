@@ -84,7 +84,7 @@ public class KonfiguratorView extends VerticalLayout implements HasUrlParameter<
         VerticalLayout vl3 = new VerticalLayout(hl1);
         vl3.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
 
-        Button WeiterButton = new Button("Weiter");
+        Button WeiterButton = new Button("Offerte anfragen");
         WeiterButton.addClickListener(e -> WeiterButton.getUI().ifPresent(ui -> ui.navigate("extra")));
         VerticalLayout WeiterButtonLayout = new VerticalLayout(WeiterButton);
         WeiterButtonLayout.setDefaultHorizontalComponentAlignment(Alignment.END);
